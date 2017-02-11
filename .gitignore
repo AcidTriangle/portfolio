@@ -37,3 +37,7 @@ build
 # Node.JS
 node_modules
 npm-debug.log
+
+# gulp gen
+sprite.gif.scss
+sprite.png.scss
