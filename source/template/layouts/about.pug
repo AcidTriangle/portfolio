@@ -1,0 +1,19 @@
+extends ../_template
+block content
+    .wrapper
+        .section.hero
+            include ../sections/socials
+            .burger
+            .arrow-down
+                svg.arrow-down__pic
+                    use(xlink:href="assets/img/sprite.svg#arrow_down")
+            .hero-container
+                .user-container
+                    img.hero-title-pic
+                    .user
+                        .user__pic
+                        .user__name
+                        .user__desc
+
+        block section_1
+        block section_2
