@@ -1,0 +1,7 @@
+.contacts
+    .block-title.contacts__title
+    ul.contacts__list
+        each value, key in contacts
+            li.contacts__item
+                +svg('contacts__pic', key+'_n')
+                .contacts__text= value

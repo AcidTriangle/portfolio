@@ -1,8 +1,0 @@
-- var socials = {vk: 'https://vk.com', github: 'https://github.com', in: 'https://linkedin.com/'};
-ul.socials
-    each value, key in socials
-        li.socials__item
-            a.socials__link(href=value)
-                | #{key}
-                svg.socials__img
-                    use(xlink:href="assets/img/sprite.svg#" + key)

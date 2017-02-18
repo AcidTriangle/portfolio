@@ -1,19 +1,13 @@
 extends ../_template
+
 block content
     .wrapper
-        .section.hero
-            include ../sections/socials
-            .burger
-            .arrow-down
-                svg.arrow-down__pic
-                    use(xlink:href="assets/img/sprite.svg#arrow_down")
-            .hero-container
-                .user-container
-                    img.hero-title-pic
-                    .user
-                        .user__pic
-                        .user__name
-                        .user__desc
+        include ../sections/hero
+            block user
+                include ../blocks/user
 
         block section_1
         block section_2
+
+    include ../blocks/socials
+        .burger

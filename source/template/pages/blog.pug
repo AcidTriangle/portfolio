@@ -1,0 +1,21 @@
+extends ../_template
+
+block title
+    |Блог
+
+block content
+    .wrapper
+        include ../sections/hero
+            block user
+                .blog-user
+                    .blog-user__pic
+                        img.blog-user__img
+                    .blog-user__title Блог
+                    .blog-user__desc Статьи, которые я написал
+
+        include ../sections/blog
+
+        include ../blocks/footer
+
+    include ../blocks/socials
+    .burger

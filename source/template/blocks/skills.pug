@@ -1,0 +1,10 @@
+.skills
+    .block-title.skills__title Чем я могу быть вам полезен
+    .skills__text
+        p
+    ul.skills-group
+        -for (var i = 0; i < skillsGroups.length; i++)
+            li.skills-group__item
+                .skills-group__title= skillsGroups[i]
+                    ul.skills-list
+                        +skills-list(skillsArray[i])

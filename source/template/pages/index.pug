@@ -1,0 +1,18 @@
+extends ../_template
+
+block content
+    .wrapper.wrapper-auth
+        .auth
+            include ../blocks/user
+            include ../blocks/socials
+            nav.auth__nav
+                ul.auth__list
+                    li.auth__item
+                        a(href="portfolio.html").auth__link Мои работы
+                    li.auth__item
+                        a(href="about.html").auth__link Обо мне
+                    li.auth__item
+                        a(href="blog.html").auth__link Блог
+        .auth-copyright
+            include ../blocks/copyright
+        a(href="#").auth-btn Авторизоваться
