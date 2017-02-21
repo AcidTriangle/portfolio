@@ -2,5 +2,4 @@ ul.socials
     each value, key in socials
         li.socials__item
             a.socials__link(href=value, target="_blank")
-                | #{key}
                 +svg('socials__img', key)

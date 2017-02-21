@@ -1,0 +1,98 @@
+$blue: #243994;
+
+.skills {
+
+  &__text {
+    margin: 40px 0 60px;
+  }
+
+}
+
+.skills-group {
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+}
+
+.skills-list {
+  margin-left: -40px;
+
+  &__item {
+    display: inline-block;
+    margin-left: 40px;
+  }
+}
+
+.skill {
+  position: relative;
+  font-size: 14px;
+  color: $blue;
+  line-height: 1rem;
+  text-align: center;
+
+  &__title {
+    @include align();
+  }
+
+  &__diagram {
+    fill: none;
+    stroke-width: 20;
+
+    &-first {
+      stroke: #dfdcd5;
+    }
+
+    &-second {
+      stroke: $blue;
+      stroke-dasharray: 0 314;
+    }
+
+    &-html{
+      stroke-dasharray: 282 314;
+      opacity: 0.9;
+    }
+    &-css{
+      stroke-dasharray: 266 314;
+      opacity: 0.8;
+    }
+    &-js{
+      stroke-dasharray: 266 314;
+      opacity: 0.8;
+    }
+    &-php{
+      stroke-dasharray: 63 314;
+      opacity: 0.2;
+    }
+    &-sql{
+      stroke-dasharray: 166 314;
+      opacity: 0.5;
+    }
+    &-node{
+      stroke-dasharray: 125 314;
+      opacity: 0.4;
+    }
+    &-mongo{
+      stroke-dasharray: 170 314;
+      opacity: 0.6;
+    }
+    &-git{
+      stroke-dasharray: 266 314;
+      opacity: 0.8;
+    }
+    &-gulp{
+      stroke-dasharray: 244 314;
+      opacity: 0.8;
+    }
+    &-yarn{
+      stroke-dasharray: 230 314;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.footer {
+  opacity: 0.8;
+  color: $white;
+}
+
+.footer-top {
+  height: 147px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: $footer-top-clr;
+
+  &__col {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    padding-left: 20px;
+    padding-right: 20px;
+    &_middle {
+      position: relative;
+      &:after,
+      &:before {
+        content: '';
+        display: block;
+        opacity: 0.2;
+        height: 87px;
+        width: 1px;
+        background: $white;
+        position: absolute;
+        top: 0;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  .socials {
+    position: static;
+    &__img {
+      fill: rgba($white, 0.2)
+    }
+  }
+}
+
+.footer-contacts {
+}
+
+.footer-bottom {
+  padding-top: 7px;
+  height: 38px;
+  background: $footer-btm-clr;
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+.nav {
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  &__list {
+    margin-left: -40px;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 40px;
+  }
+}

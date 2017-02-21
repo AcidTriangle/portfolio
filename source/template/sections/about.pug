@@ -1,12 +1,26 @@
 section.about.section
+
+    svg(viewBox='0 0 1000 160' preserveAspectRatio='none').about__triangle.about__triangle_left
+        polygon(points="0,0 0,160 1000,160")
+    svg(viewBox='0 0 1000 160' preserveAspectRatio='none').about__triangle.about__triangle_right
+        polygon(points="0,160 1000,160 1000,0")
+
     .about__col.about__col_left
-        .section-title(style="background-image: url('./assets/img/stars3.svg')")
-            .section-title__name Обо мне
-        .about-me
-            .about-me__pic
-                .about-me__img
-            .block-title.about-me__title Кто я
-            .about-me__text
-                p
+        .about-me-col.about-me-col_left
+            .section-title.section-title_about
+                .section-title__pic.section-title__pic_1(style="background-image: url('./assets/img/stars2.svg')")
+                .section-title__name Обо мне
+
+        .about-me-col.about-me-col_right
+            .about-me
+                .about-me__pic
+                    img.about-me__img(src="./assets/img/about-photo.png")
+                .block-title.about-me__title Кто я
+                .about-me__text
+                    p.
+                        Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p.
+                        Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
     .about__col.about__col_right
         include ../blocks/skills

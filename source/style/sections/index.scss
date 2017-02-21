@@ -1,0 +1,106 @@
+.wrapper-auth {
+  background: url('../img/auth_background.png') no-repeat 100% 100%;
+  background-size: contain;
+}
+
+.auth {
+  width: 380px;
+  height: 395px;
+  padding-top: 40px;
+  background-color: rgba($blueblack, 0.5);
+  text-align: center;
+  color: $white;
+
+  @include align(both);
+
+  //naviagtion
+  &__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 16px;
+    border-right: 2px $light-gray solid;
+    vertical-align: bottom;
+    &:last-child {
+      border-right: none;
+    }
+    &_works {
+      width: 157px;
+    }
+    &_about {
+      width: 127px;
+    }
+    &_blog {
+      width: 96px;
+    }
+    &_form {
+      width: 50%;
+    }
+  }
+  &__btn {
+    display: block;
+    padding-top: 12px;
+    height: 45px;
+    background-color: rgba($blue, 0.8);
+    transition: .5s;
+
+    &:hover {
+      background-color: rgba($dark-blue, 0.8);
+    }
+
+    &_form {
+      padding-top: 0;
+      width: 100%;
+      border: none;
+      color: $white;
+      cursor: pointer;
+    }
+
+  }
+  //navigation end
+
+  &-back {
+    display: none;
+  }
+}
+
+//copyright
+.auth-copyright {
+  @include align(hor);
+  bottom: 40px;
+}
+
+//auth button
+.auth-btn {
+  width: 180px;
+  height: 45px;
+  padding-top: 9px;
+  display: block;
+  position: absolute;
+  right: 100px;
+  top: 24px;
+  border: 1px solid $white;
+  text-align: center;
+}
+
+//socials
+.auth .socials {
+  margin: 40px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  &__item:hover .socials__img {
+    fill-opacity: 1;
+  }
+
+  &__img {
+    fill: $blue;
+    fill-opacity: 0.7;
+  }
+}

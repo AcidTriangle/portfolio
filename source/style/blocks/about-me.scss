@@ -1,0 +1,25 @@
+.about-me-col {
+  @extend %clearfix;
+
+  display: inline-block;
+  vertical-align: top;
+
+  &_left {
+    float: left;
+    width: 45%;
+    text-align: center;
+  }
+  &_right {
+    float: right;
+    width: 443px;
+  }
+}
+
+.about-me {
+  &__pic {
+    margin-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+}

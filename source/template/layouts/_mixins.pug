@@ -1,0 +1,23 @@
+mixin svg (className, fileName)
+    svg(class=className)
+        use(xlink:href=`./assets/img/sprite.svg#${fileName}`)
+
+mixin skills-list (params)
+    each val, key in params
+        li.skills-list__item
+            .skill
+                .skill__title= val
+                svg(width="120" height="120" class="skill__diagram")
+                    circle(r="50" cx="50%" cy="50%" fill="none").skill__diagram-first
+                    circle(r="50" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="sector" class=`skill__diagram-${key}`).skill__diagram-second
+
+mixin user (value)
+    .user
+        .user__pic
+            img(src="./assets/img/user_photo.jpg").user__img
+        if value == "user"
+            .user__title Зайцев Дмитрий
+            .user__desc Личный сайт веб разработчика
+        else if value == "blog"
+            .user__title.user__title_blog Блог
+            .user__desc Статьи, которые я написал

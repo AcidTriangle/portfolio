@@ -1,0 +1,31 @@
+.user {
+  text-align: center;
+  color: $white;
+  width: 100%;
+  &__pic {
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 141px;
+    height: 141px;
+    position: relative;
+  }
+
+  &__img {
+    width: 300px;
+    position: absolute;
+    top: -30px;
+    left: -78px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 35px;
+
+    &_blog {
+      font-size: 63px;
+      margin-bottom: 20px;
+    }
+  }
+}

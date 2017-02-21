@@ -1,0 +1,5 @@
+.map {
+  height: calc(100vh + #{$footer-height});
+  background: url('../img/map.png') no-repeat 50% 50%;
+  background-size: 100% 100%;
+}

@@ -1,7 +1,17 @@
 .contacts
-    .block-title.contacts__title
+    .block-title.contacts__title Контакты
     ul.contacts__list
-        each value, key in contacts
+        .contacts__col
             li.contacts__item
-                +svg('contacts__pic', key+'_n')
-                .contacts__text= value
+                +svg('contacts__pic contacts__block', 'skype_n')
+                .contacts__text.contacts__block= contacts.skype
+            li.contacts__item
+                +svg('contacts__pic contacts__block', 'envelope_n')
+                .contacts__text.contacts__block= contacts.envelope
+        .contacts__col
+            li.contacts__item
+                +svg('contacts__pic contacts__block', 'phone_n')
+                .contacts__text.contacts__block= contacts.phone
+            li.contacts__item
+                +svg('contacts__pic contacts__block', 'map_n')
+                .contacts__text.contacts__block= contacts.map

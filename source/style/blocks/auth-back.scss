@@ -1,0 +1,125 @@
+.auth-back {
+  padding: 0px 20px;
+
+  &__label {
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
+.auth-form {
+
+  &__row {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 45px;
+    padding-left: 60px;
+    border: none;
+    position: relative;
+
+    &-pic {
+      display: block;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      z-index: 1;
+      background-color: #f0efe9;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      &_login {
+        background-image: url('../img/login.svg');
+      }
+      
+      &_pass {
+        background-image: url('../img/password.svg');
+      }
+    }
+  }
+
+  &__qstn {
+    opacity: 0.5;
+  }
+
+  &__check {
+    padding-left: 30px;
+    position: relative;
+
+  }
+
+  &__radio {
+    padding-left: 30px;
+    margin-left: 40px;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+//placeholders style
+.auth-form__input::-moz-placeholder,
+.auth-form__input::-webkit-input-placeholder
+{
+  color: rgba($black, 0.5);
+}
+
+//checkbox and radio style
+//check
+.auth-form__check-title {
+  color: rgba($white, 0.8);
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/check.svg") no-repeat 50% #0548be;
+    background-size: 0;
+    border-radius: 2px;
+    transition: background-size .5s;
+  }
+}
+
+.auth-form__check-input {
+  display: none;
+  &:checked + .auth-form__check-title:before {
+    background-size: 12px;
+  }
+}
+
+//radio
+.auth-form__radio-title {
+  color: rgba($white, 0.8);
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    transition: .5s;
+  }
+}
+
+.auth-form__radio-input {
+  display: none;
+  &:checked + .auth-form__radio-title:before {
+    background: #0548be;
+  }
+}

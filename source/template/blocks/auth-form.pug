@@ -1,0 +1,26 @@
+form(action="", method="post").auth-form
+    .auth-form__row
+        .auth-form__input-pic.auth-form__input-pic_login
+        input(type="text", id="login-input", name="login", placeholder="Логин").auth-form__input
+    .auth-form__row
+        .auth-form__input-pic.auth-form__input-pic_pass
+        input(type="password", id="auth-password", name="password", placeholder="Пароль").auth-form__input
+    .auth-form__row
+        label.auth-form__check
+            input(type="checkbox", id="check-human").auth-form__check-input
+            span.auth-form__check-title Я человек
+    .auth-form__row
+        .auth-form__qstn Вы точно не робот?
+        .auth-form__radios
+            label.auth-form__radio
+                input(type="radio", id="radio-true", name="radio" ).auth-form__radio-input
+                span.auth-form__radio-title Да
+            label.auth-form__radio
+                input(type="radio", id="radio-false",  name="radio", checked).auth-form__radio-input
+                span.auth-form__radio-title Не уверен
+    nav.auth__nav
+        ul.auth__list
+            li.auth__item.auth__item_form
+                input(type="button", id="to-main-btn", value="На главную").auth__btn.auth__btn_form
+            li.auth__item.auth__item_form
+                input(type="submit", id="login-btn", value="Войти").auth__btn.auth__btn_form

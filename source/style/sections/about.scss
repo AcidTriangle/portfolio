@@ -1,0 +1,39 @@
+$left-col: #faf8f0;
+$right-col: #eae8e2;
+
+.about {
+  @extend %clearfix;
+
+  &__col {
+    padding-top: 20px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    &_left {
+      float: left;
+      background: $left-col;
+      padding-right: 20px;
+    }
+    &_right {
+      padding-left: 35px;
+      padding-right: 35px;
+      float: right;
+      background: $right-col;
+    }
+  }
+
+  &__triangle {
+    display: block;
+    width: 50%;
+    height: 160px;
+    position: absolute;
+    bottom: 100%;
+    &_left {
+      fill: $left-col;
+    }
+    &_right {
+      right: 0;
+      fill: $right-col
+    }
+  }
+}

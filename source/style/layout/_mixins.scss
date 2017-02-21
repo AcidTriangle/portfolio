@@ -1,0 +1,24 @@
+@mixin align($align: "both") {
+  position: absolute;
+  @if ($align=="both") {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if ($align=="hor") {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if ($align=="vert") {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%clearfix {
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}

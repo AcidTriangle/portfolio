@@ -1,0 +1,20 @@
+.socials {
+  &__item {
+    margin-left: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover .socials__img {
+      fill: rgba($blue, 1);
+    }
+  }
+  &__img {
+    fill: $white;
+    fill-opacity: 1;
+    width: 32px;
+    height: 22px;
+    transition: .5s;
+  }
+}
