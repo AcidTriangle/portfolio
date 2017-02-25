@@ -1,11 +1,15 @@
 .slider
-    .slider__col.slider__col-left
-        .block-title.slider__title
-        .slider__desc
-        a.slider__btn
-            +svg('slider__btn_pic', 'link')
-            .slider__btn-text Посмотреть сайт
-    .slider__col.slider__col-right
+    .slider__preview
         .slider__content
-        .slider__prev
-        .slider__next
+    .slider__desc
+        .slider__desc-content
+            .block-title.slider__title Сайт школы онлайн образования
+            .slider__instr HTML, CSS, JAVASCRIPT
+            a.slider__btn(href="#")
+                +svg('slider__btn-pic', 'link')
+                .slider__btn-text Посмотреть сайт
+    .slider__nav
+        .slider__nav-col.slider__nav-col_prev
+            +svg('slider__arrow_down slider__arrow', 'arrow_down')
+        .slider__nav-col.slider__nav-col_next
+            +svg('slider__arrow_up slider__arrow', 'arrow_down')

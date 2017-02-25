@@ -22,3 +22,20 @@
     display: block;
   }
 }
+
+//media
+@mixin desktop {  //desktops and laptops
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

@@ -1,8 +1,11 @@
 section.section.hero
+    a(href="#").nav-arrow.nav-arrow_down
+        +svg('nav-arrow__pic', 'arrow_down')
 
-    a(href="").arrow-down
-        +svg('arrow-down__pic', 'arrow_down')
-
-    .hero-container
-        .hero__bg(style = "background-image: url('./assets/img/stars1.svg')")
+    video.hero__bg-video(src="./assets/img/night.mp4", loop)
+    .hero__bg
+        img.hero__bg-img(src="./assets/img/auth_background.png")
+    .user-bg
+        img.user-bg__img(src="./assets/img/stars1.svg")
+    .user
         block user

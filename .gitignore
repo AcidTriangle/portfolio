@@ -33,7 +33,6 @@ Thumbs.db
 bower_components
 dist
 build
-source/fonts
 
 # Node.JS
 node_modules

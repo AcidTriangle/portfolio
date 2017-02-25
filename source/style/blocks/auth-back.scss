@@ -1,10 +1,10 @@
 .auth-back {
   padding: 0px 20px;
 
-  &__label {
+  &__title {
     margin-bottom: 40px;
     font-size: 35px;
-    font-weight: bold;
+    font-family: 'sansus_regular';
     text-transform: uppercase;
     color: $white;
   }
@@ -45,12 +45,16 @@
   }
 
   &__qstn {
-    opacity: 0.5;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-family: 'robotobold';
+    opacity: 0.8;
   }
 
   &__check {
     padding-left: 30px;
     position: relative;
+    font-family: 'robotoregular';
 
   }
 
@@ -58,6 +62,7 @@
     padding-left: 30px;
     margin-left: 40px;
     position: relative;
+    font-family: 'robotoregular';
 
     &:first-child {
       margin-left: 0;
@@ -68,7 +73,8 @@
 
 //placeholders style
 .auth-form__input::-moz-placeholder,
-.auth-form__input::-webkit-input-placeholder
+.auth-form__input::-webkit-input-placeholder,
+.auth-form__input:-ms-input-placeholder
 {
   color: rgba($black, 0.5);
 }
@@ -119,6 +125,9 @@
 
 .auth-form__radio-input {
   display: none;
+  &:checked + .auth-form__radio-title{
+    font-family: 'robotomedium';
+  }
   &:checked + .auth-form__radio-title:before {
     background: #0548be;
   }

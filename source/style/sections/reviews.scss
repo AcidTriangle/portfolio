@@ -1,0 +1,16 @@
+.reviews {
+  background-image: url('../img/reviews_bg.jpg');
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin: 0 auto;
+  }
+}
+
+.reviews-content {
+  width: 780px;
+  margin: 0 auto;
+  padding: 75px 0 155px;
+}

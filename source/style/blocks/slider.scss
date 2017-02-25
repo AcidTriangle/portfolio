@@ -1,0 +1,105 @@
+.slider {
+  height: 100vh;
+  min-height: 600px;
+  @extend %clearfix;
+
+  &__desc {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: #f2f0e8;
+    position: relative;
+    &-content {
+      @include align(both);
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__instr {
+    margin-bottom: 60px;
+    color: #083c96;
+    font-family: 'robotomedium';
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 15px 20px;
+    width: 200px;
+    position: relative;
+    background: $blue;
+    transition: .5s;
+    &-pic {
+      fill: #fff;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 18px;
+      top: 15px;
+    }
+    &-text {
+      padding-left: 30px;
+    }
+    &:hover {
+      background: #083c96;
+    }
+  }
+
+  &__preview {
+    float: right;
+    width: 50%;
+    height: 70%;
+    background: #e3e2de;
+  }
+
+  &__nav {
+    float: right;
+    height: 30%;
+    width: 50%;
+
+
+    @extend %clearfix;
+  }
+
+  &__nav-col {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.7;
+    }
+    &_prev {
+      &:before {
+        background: #aaabb7;
+      }
+    }
+    &_next {
+      &:before {
+        background: #7e7f8a;
+      }
+    }
+  }
+
+  &__arrow {
+    width: 43px;
+    height: 27px;
+    @include align(both);
+    z-index: 10;
+    fill: #fff;
+    &_up {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+}

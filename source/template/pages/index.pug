@@ -3,8 +3,14 @@ extends ../_template
 block content
     .wrapper.wrapper-auth
 
+        video.auth__bg-video(src="./assets/img/night.mp4", autoplay, loop)
+
+        .auth__bg-pic
+            img.auth__bg-img(src="./assets/img/auth_background.png")
+
         include ../sections/auth
 
         .auth-copyright
             include ../blocks/copyright
+
         a(href="#").auth-btn Авторизоваться

@@ -1,8 +1,3 @@
-.wrapper-auth {
-  background: url('../img/auth_background.png') no-repeat 100% 100%;
-  background-size: contain;
-}
-
 .auth {
   width: 380px;
   height: 395px;
@@ -10,10 +5,34 @@
   background-color: rgba($blueblack, 0.5);
   text-align: center;
   color: $white;
+  font-family: 'robotomedium';
 
   @include align(both);
 
-  //naviagtion
+  &__bg {
+
+    &-video {
+      @include align(both);
+    }
+
+    &-pic {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: $bg-mountain;
+
+      @include desktop {
+        height: $bg-mountain-desktop;
+      }
+    }
+    &-img {
+      display: block;
+      max-width: 180%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
   &__nav {
     position: absolute;
     left: 0;
@@ -27,6 +46,7 @@
     font-size: 16px;
     border-right: 2px $light-gray solid;
     vertical-align: bottom;
+
     &:last-child {
       border-right: none;
     }
@@ -49,6 +69,7 @@
     height: 45px;
     background-color: rgba($blue, 0.8);
     transition: .5s;
+    font-family: 'robotomedium';
 
     &:hover {
       background-color: rgba($dark-blue, 0.8);
@@ -63,10 +84,14 @@
     }
 
   }
-  //navigation end
 
   &-back {
     display: none;
+  }
+
+
+  .user__title {
+    font-size: 28px;
   }
 }
 
@@ -87,6 +112,16 @@
   top: 24px;
   border: 1px solid $white;
   text-align: center;
+  transition: .5s;
+  font-family: 'robotomedium';
+  &:hover {
+    border-color: #083c96;
+    background: #083c96;
+  }
+
+  @include desktop {
+    right: 20px;
+  }
 }
 
 //socials

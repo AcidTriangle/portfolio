@@ -1,0 +1,18 @@
+.nav-arrow {
+  display: block;
+  @include align(hor);
+  z-index: 10;
+  bottom: 70px;
+
+  &__pic {
+    width: 26px;
+    height: 16px;
+    fill: white;
+    fill-opacity: 0.5;
+    transition: .5s;
+  }
+
+  &:hover &__pic{
+    fill-opacity: 1;
+  }
+}

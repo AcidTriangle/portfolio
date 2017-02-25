@@ -5,11 +5,13 @@ block title
 
 block content
     .wrapper
-        include ../sections/hero
-            block user
-                include ../blocks/blog-user
+        include ../sections/blog-hero
 
-        include ../sections/blog
+        .blog-container
+
+            include ../blocks/blog-triangles
+
+            include ../sections/blog
 
         include ../blocks/footer
 

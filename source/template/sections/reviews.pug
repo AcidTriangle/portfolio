@@ -1,6 +1,12 @@
 section.section.reviews
-    .section-wrapper
-        .section-title(style="backgroud-image: url('./assets/img/stars2.svg')")
+    .content.reviews-content
+
+        +section-title('Что обо мне говорят', 'white reviews__title', '3')
+
         include ../blocks/reviews
         include ../blocks/feedback
+
+        a.nav-arrow.nav-arrow_up(href="#")
+            +svg('nav-arrow__pic', 'portf_arrow_up')
+
     include ../blocks/footer

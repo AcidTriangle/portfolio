@@ -1,0 +1,58 @@
+.reviews {
+  &__list {
+    width: 750px;
+    margin: 70px 0;
+    color: $white;
+    font-size: 0;
+    font-family: 'robotoitalic';
+    position: relative;
+    * {
+      font-size: 1rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    &:first-child {
+      margin-right: 2%;
+    }
+  }
+
+  &__pic {
+    margin: 0 auto 20px;
+    width: 77px;
+    height: 77px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  &__img {
+    &_1 {
+      position: absolute;
+      top: -20%;
+      left: -10%;
+    }
+  }
+
+  &__reviewer {
+    margin-top: 30px;
+    text-align: center;
+
+  }
+
+  &__name {
+    font-family: 'robotobold_italic';
+  }
+
+  &__bg {
+    width: 75px;
+    height: 61px;
+    opacity: 0.1;
+    background: url('../img/quotes.svg') no-repeat;
+    position: absolute;
+    top: 30%;
+  }
+}

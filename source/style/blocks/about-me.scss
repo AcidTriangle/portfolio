@@ -1,17 +1,24 @@
 .about-me-col {
   @extend %clearfix;
-
-  display: inline-block;
   vertical-align: top;
 
   &_left {
     float: left;
     width: 45%;
+    margin-bottom: 60px;
     text-align: center;
+    @include desktop {
+      float: none;
+      width: 100%;
+    }
   }
   &_right {
     float: right;
     width: 443px;
+    @include desktop {
+      float: none;
+      display: inline-block;
+    }
   }
 }
 
@@ -21,5 +28,8 @@
   }
   &__title {
     margin-bottom: 30px;
+  }
+  &__text {
+    text-align: left;
   }
 }

@@ -1,13 +1,13 @@
 .feedback
     form(action="", method="post").feedback__form
-        .block-title.feedback__title
+        .feedback__container
+            .block-title.block-title_white.feedback__title Связаться со мной
             .feedback__block
                 input(type="text", name="name", id="name", placeholder="Ваше имя").feedback__input
             .feedback__block
                 input(type="email", name="email", id="email", placeholder="Ваш email").feedback__input
             .feedback__block
                 textarea(id="message", placeholder="Ваше сообщение").feedback__input.feedback__input_ta
-            .feedback__btn
-                input(id="submit", value="Отправить", type="button").feedback__btn-submit
-            .feedback__btn
-                input(value="Очистить", type="reset").feedback__btn-reset
+        .feedback__btns
+                input(id="submit", value="Отправить", type="button").feedback__btn_submit.feedback__btn
+                input(value="Очистить", type="reset").feedback__btn_reset.feedback__btn
