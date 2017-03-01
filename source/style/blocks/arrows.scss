@@ -2,11 +2,11 @@
   display: block;
   @include align(hor);
   z-index: 10;
-  bottom: 70px;
+  bottom: rem(70);
 
   &__pic {
-    width: 26px;
-    height: 16px;
+    width: rem(26);
+    height: rem(16);
     fill: white;
     fill-opacity: 0.5;
     transition: .5s;

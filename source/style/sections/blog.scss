@@ -1,5 +1,7 @@
 $blog-bg-color: #faf8f0;
 $sidebar-text: #455a64;
+$blog-content: 920px;
+$sidebar-width: 300px;
 
 .blog-hero {
   width: 100%;
@@ -20,13 +22,10 @@ $sidebar-text: #455a64;
   }
 }
 
-.blog-container {
-  position: relative;
-  background-color: $blog-bg-color;
-}
-
 .blog {
   padding-top: 70px;
+  background-color: $blog-bg-color;
+
   &__triangle {
     display: block;
     width: 50%;
@@ -42,10 +41,21 @@ $sidebar-text: #455a64;
   }
 }
 
+.blog-container {
+  margin: 0 auto;
+  width: $blog-content;
+
+  @include desktop {
+    width: 1020px;
+  }
+}
+
 .blog-sb {
-  float: left;
-  width: 320px;
+  width: 300px;
   text-align: right;
+  position: absolute;
+  left: - ($sidebar-width + 100px);
+
   &__item {
     margin-bottom: 10px;
     &.active .blog-sb__link {
@@ -60,17 +70,26 @@ $sidebar-text: #455a64;
     color: $sidebar-text;
     line-height: 26px;
     &:hover {
+      transition: 0.5s;
       color: $main-blue;
       font-family: 'robotobold';
     }
+  }
+
+  @include desktop {
+    position: static;
+    float: left;
+    margin-left: -80px;
   }
 }
 
 .blog-content {
   margin: -70px auto 0;
-  width: 960px;
+  padding: 0px 20px;
+  position: relative;
   @include desktop {
-    width: 690px;
+    width: 720px;
+    float: right;
   }
 }
 

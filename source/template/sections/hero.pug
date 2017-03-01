@@ -1,11 +1,12 @@
 section.section.hero
-    a(href="#").nav-arrow.nav-arrow_down
-        +svg('nav-arrow__pic', 'arrow_down')
+    .container.hero-container
+        a(href="#").nav-arrow.nav-arrow_down
+            +svg('nav-arrow__pic', 'arrow_down')
 
-    video.hero__bg-video(src="./assets/img/night.mp4", loop)
-    .hero__bg
-        img.hero__bg-img(src="./assets/img/auth_background.png")
-    .user-bg
-        img.user-bg__img(src="./assets/img/stars1.svg")
-    .user
-        block user
+        video.hero__bg-video(src="./assets/img/night.mp4", loop)
+        .hero__bg
+            img.hero__bg-img(src="./assets/img/auth_background.png")
+        .user-bg
+            img.user-bg__img(src="./assets/img/stars1.svg")
+        .user
+            block user

@@ -1,33 +1,45 @@
 .about-me-col {
   @extend %clearfix;
   vertical-align: top;
+  max-width: 100%;
 
   &_left {
     float: left;
     width: 45%;
-    margin-bottom: 60px;
+    margin-bottom: rem(60);
     text-align: center;
     @include desktop {
       float: none;
       width: 100%;
     }
+    @include tablet {
+      margin: rem(50) 0 rem(60);
+    }
   }
   &_right {
     float: right;
-    width: 443px;
+    width: rem(443);
     @include desktop {
       float: none;
       display: inline-block;
     }
+    @include tablet {
+      width: 60%;
+    }
   }
+
 }
 
 .about-me {
   &__pic {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
   }
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
   }
   &__text {
     text-align: left;

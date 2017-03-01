@@ -7,13 +7,14 @@ block content
     .wrapper
         include ../sections/blog-hero
 
-        .blog-container
+        section.section.blog
 
             include ../blocks/blog-triangles
 
-            include ../sections/blog
+            .container.blog-container
+                include ../sections/blog
 
-        include ../blocks/footer
+        include ../sections/footer
 
     include ../blocks/socials
 

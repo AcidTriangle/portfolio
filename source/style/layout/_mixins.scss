@@ -15,6 +15,10 @@
   }
 }
 
+@function rem ($px) {
+  @return #{$px/16}rem;
+}
+
 %clearfix {
   &:after {
     content: '';
@@ -29,8 +33,13 @@
     @content;
   }
 }
+@mixin laptop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
 @mixin tablet {
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     @content;
   }
 }

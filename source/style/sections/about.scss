@@ -1,27 +1,40 @@
-$left-col: #faf8f0;
-$right-col: #eae8e2;
+$about-left-col: #f2f0e8;
+$about-right-col: #eae8e2;
+$about-right-col-tablet: #f4f5f0;
+
+
+.about-container {
+  display: flex;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
 
 .about {
-  @extend %clearfix;
-  height: 890px;
 
   &__col {
     padding-top: 20px;
     width: 50%;
-    height: 100%;
     position: relative;
     &_left {
-      float: left;
       padding-right: 20px;
-      background: $left-col;
+      padding-left: 20px;
+      background: $about-left-col;
       text-align: center;
     }
     &_right {
       padding-left: 40px;
-      float: right;
-      background: $right-col;
+      background: $about-right-col;
+
+      @include tablet {
+        background-color: $about-right-col-tablet;
+      }
     }
 
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__triangle {
@@ -31,11 +44,15 @@ $right-col: #eae8e2;
     position: absolute;
     bottom: 100%;
     &_left {
-      fill: $left-col;
+      fill: $about-left-col;
     }
     &_right {
       right: 0;
-      fill: $right-col
+      fill: $about-right-col;
+
+      @include tablet {
+        fill: $about-left-col;
+      }
     }
   }
 

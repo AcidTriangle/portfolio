@@ -8,6 +8,14 @@ body {
   line-height: 24px;
   color: $gray;
   background: $white;
+
+  @include laptop {
+    font-size: 15px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 * {
@@ -40,9 +48,6 @@ a {
   }
 }
 
-//.section-wrapper {
-//  height: calc(100% - #{$footer-height});
-//}
 
 .section {
   min-height: $section-min-height;
@@ -50,7 +55,7 @@ a {
   position: relative;
 }
 
-.content {
+.container {
   height: 100%;
   position: relative;
   @extend %clearfix;
