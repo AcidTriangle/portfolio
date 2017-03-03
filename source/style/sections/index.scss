@@ -1,7 +1,7 @@
 .auth {
-  width: 380px;
-  height: 395px;
-  padding-top: 40px;
+  width: rem(380);
+  height: rem(395);
+  padding-top: rem(40);
   background-color: rgba($blueblack, 0.5);
   text-align: center;
   color: $white;
@@ -22,7 +22,13 @@
       height: $bg-mountain;
 
       @include desktop {
-        height: $bg-mountain-desktop;
+        height: $bg-mountain-desktop - 70px;
+      }
+      @include laptop {
+        height: $bg-mountain-laptop - 100px;
+      }
+      @include tablet {
+        height: $bg-mountain-tablets - 200px;
       }
     }
     &-img {
@@ -43,21 +49,35 @@
 
   &__item {
     display: inline-block;
-    font-size: 16px;
-    border-right: 2px $light-gray solid;
+    font-size: rem(16);
+    //border-right: 2px $light-gray solid;
     vertical-align: bottom;
+    position: relative;
 
+    &:after {
+      display: block;
+      content: '';
+      height: 100%;
+      width: 2px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $light-gray;
+    }
     &:last-child {
       border-right: none;
+      &:after {
+        display: none;
+      }
     }
     &_works {
-      width: 157px;
+      width: 40%;
     }
     &_about {
-      width: 127px;
+      width: 32%;
     }
     &_blog {
-      width: 96px;
+      width: 28%;
     }
     &_form {
       width: 50%;
@@ -65,8 +85,8 @@
   }
   &__btn {
     display: block;
-    padding-top: 12px;
-    height: 45px;
+    padding-top: rem(12);
+    height: rem(45);
     background-color: rgba($blue, 0.8);
     transition: .5s;
     font-family: 'robotomedium';
@@ -91,26 +111,32 @@
 
 
   .user__title {
-    font-size: 28px;
+    font-size: rem(28);
+  }
+
+  @include tablet {
+    width: 45vmax;
   }
 }
 
 //copyright
 .auth-copyright {
-  @include align(hor);
-  bottom: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: rem(40);
+  text-align: center;
 }
 
 //auth button
 .auth-btn {
-  width: 180px;
-  height: 45px;
-  padding-top: 9px;
+  width: rem(180);
+  height: rem(45);
+  padding-top: rem(9);
   display: block;
   position: absolute;
-  right: 100px;
-  top: 24px;
-  border: 1px solid $white;
+  right: rem(100);
+  top: rem(24);
+  border: rem(1) solid $white;
   text-align: center;
   transition: .5s;
   font-family: 'robotomedium';
@@ -120,13 +146,13 @@
   }
 
   @include desktop {
-    right: 20px;
+    right: rem(20);
   }
 }
 
 //socials
 .auth .socials {
-  margin: 40px 0;
+  margin: rem(40) 0;
   position: relative;
   top: 0;
   left: 0;

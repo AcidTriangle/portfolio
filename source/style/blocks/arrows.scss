@@ -3,6 +3,12 @@
   @include align(hor);
   z-index: 10;
   bottom: rem(70);
+  &_up {
+    position: static;
+    margin: 0 auto;
+    width: rem(30);
+    margin-bottom: rem(70);
+  }
 
   &__pic {
     width: rem(26);

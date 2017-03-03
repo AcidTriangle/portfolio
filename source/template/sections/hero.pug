@@ -3,10 +3,16 @@ section.section.hero
         a(href="#").nav-arrow.nav-arrow_down
             +svg('nav-arrow__pic', 'arrow_down')
 
-        video.hero__bg-video(src="./assets/img/night.mp4", loop)
-        .hero__bg
+        .hero__bg-video
+            video.hero-parallax-layer-1(src="./assets/img/night.mp4", loop)
+
+        .hero__bg.hero-parallax-layer-2
             img.hero__bg-img(src="./assets/img/auth_background.png")
+
         .user-bg
-            img.user-bg__img(src="./assets/img/stars1.svg")
+            .hero-parallax-layer-3
+                img.user-bg__img(src="./assets/img/stars1.svg")
+
         .user
-            block user
+            .hero-parallax-layer-4
+                block user

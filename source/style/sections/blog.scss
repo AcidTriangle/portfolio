@@ -1,11 +1,11 @@
 $blog-bg-color: #faf8f0;
 $sidebar-text: #455a64;
-$blog-content: 920px;
-$sidebar-width: 300px;
+$blog-content: rem(920);
+$sidebar-width: rem(300);
 
 .blog-hero {
   width: 100%;
-  height: 400px;
+  height: rem(400);
   position: relative;
   overflow: hidden;
   &__bg {
@@ -13,7 +13,7 @@ $sidebar-width: 300px;
     top: 0;
     left: 0;
     right: 0;
-    height: 550px;
+    height: rem(550);
     &-img {
       display: block;
       bottom: 0;
@@ -23,7 +23,7 @@ $sidebar-width: 300px;
 }
 
 .blog {
-  padding-top: 70px;
+  padding-top: rem(70);
   background-color: $blog-bg-color;
 
   &__triangle {
@@ -48,27 +48,30 @@ $sidebar-width: 300px;
   @include desktop {
     width: 1020px;
   }
+  @include tablet {
+    width: 95%
+  }
 }
 
 .blog-sb {
-  width: 300px;
+  width: rem(300);
   text-align: right;
   position: absolute;
-  left: - ($sidebar-width + 100px);
+  left: - ($sidebar-width + rem(100));
 
   &__item {
-    margin-bottom: 10px;
+    margin-bottom: rem(10);
     &.active .blog-sb__link {
-      border-right: 3px solid $main-blue;
+      border-right: rem(3) solid $main-blue;
       color: $main-blue;
       font-family: 'robotobold';
     }
   }
   &__link {
     display: inline-block;
-    padding: 15px 20px;
+    padding: rem(15) rem(20);
     color: $sidebar-text;
-    line-height: 26px;
+    line-height: rem(26);
     &:hover {
       transition: 0.5s;
       color: $main-blue;
@@ -79,24 +82,34 @@ $sidebar-width: 300px;
   @include desktop {
     position: static;
     float: left;
-    margin-left: -80px;
+    margin-left: rem(-80);
+  }
+  @include tablet {
+    display: none;
+    float: none;
+    margin-left: 0;
   }
 }
 
 .blog-content {
-  margin: -70px auto 0;
-  padding: 0px 20px;
+  margin: rem(-70) auto 0;
+  padding: 0 rem(20);
   position: relative;
   @include desktop {
     width: 720px;
     float: right;
   }
+  @include tablet {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
 .blog-article {
-  margin-top: 70px;
-  padding-bottom: 70px;
+  margin-top: rem(70);
+  padding-bottom: rem(70);
   position: relative;
   &:after {
     content: '';
@@ -105,7 +118,7 @@ $sidebar-width: 300px;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: rem(5);
     background: rgba($black, 0.07);
   }
   &:last-child {
@@ -115,21 +128,21 @@ $sidebar-width: 300px;
   }
 
   &__title {
-    margin-bottom: 30px;
-    line-height: 41px;
+    margin-bottom: rem(30);
+    line-height: rem(41);
     color: $gray;
-    font-size: 35px;
+    font-size: rem(35);
     font-family: 'sansus_regular';
   }
 
   &__date {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
     color: $main-blue;
   }
 
   &__content {
     p {
-      margin: 0px 0px 20px;
+      margin: 0 0 rem(20);
     }
   }
 }

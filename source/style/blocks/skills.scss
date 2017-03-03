@@ -2,41 +2,49 @@ $skill-blue: #243994;
 
 .skills {
 
+
   &__text {
-    margin: 40px 0 60px;
+    margin: rem(40) 0 rem(60);
+    @include tablet {
+      width: 472px;
+      margin: 0 auto;
+    }
   }
 
+  @include tablet {
+    text-align: center;
+  }
 }
 
 .skills-group {
 
   &__title {
-    margin-bottom: 20px;
-    font-size: 28px;
+    margin-bottom: rem(20);
+    font-size: rem(28);
     font-weight: bold;
   }
 
   &__item {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
   }
 }
 
 .skills-list {
-  margin-left: -40px;
+  margin-left: rem(-40);
   font-size: 0;
   * {
-    font-size: 14px;
+    font-size: rem(14);
   }
   &__item {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: rem(40);
     @include desktop {
-      margin-left: 35px;
+      margin-left: rem(35);
     }
   }
 
   @include desktop {
-    margin-left: -35px;
+    margin-left: rem(-35);
   }
 }
 
@@ -61,7 +69,7 @@ $skill-blue: #243994;
     }
 
     &-second {
-      stroke: $skill-blue;
+      stroke: $blue;
       stroke-dasharray: 0 314;
     }
 

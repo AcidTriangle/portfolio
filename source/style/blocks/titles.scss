@@ -1,6 +1,6 @@
 .section-title {
   position: relative;
-  font-size: 63px;
+  font-size: rem(63);
   font-family: 'sansus_regular';
   color: $gray;
   text-transform: uppercase;
@@ -21,29 +21,29 @@
     background-position: 50%;
     @include align("vert");
     &_1 {
-      height: 171px;
+      height: rem(171);
       transform: translateY(-50%) rotate(180deg);
     }
     &_2 {
-      height: 202px;
+      height: rem(202);
     }
   }
 }
 
 .block-title {
-  padding-bottom: 30px;
+  padding-bottom: rem(30);
   text-align: center;
-  font-size: 35px;
+  font-size: rem(35);
   font-family: 'sansus_regular';
   text-transform: uppercase;
-  line-height: 35px;
+  line-height: rem(35);
   position: relative;
 
   &:after {
     content: '';
     display: block;
-    width: 89px;
-    height: 3px;
+    width: rem(89);
+    height: rem(3);
     background: rgba($gray, 0.5);
     @include align(hor);
     bottom: 0;

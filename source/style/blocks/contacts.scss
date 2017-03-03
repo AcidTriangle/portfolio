@@ -1,12 +1,11 @@
 .contacts {
-  padding: 40px 20px 30px;
-  width: 580px;
-  height: 283px;
+  padding: rem(40)rem(20)rem(30);
+  width: rem(580);
   background-color: rgba($white, 0.7);
   @include align();
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
   }
 
   &__list {
@@ -17,25 +16,34 @@
   &__col {
     float: left;
     width: 50%;
+    @include tablet {
+      width: 100%;
+      float: none;
+    }
   }
 
   &__item {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
   }
 
   &__block {
     display: inline-block;
     vertical-align: middle;
+
   }
 
   &__pic {
-    margin-right: 10px;
-    width: 45px;
-    height: 45px;
+    margin-right: rem(10);
+    width: rem(45);
+    height: rem(45);
     fill: $blue
   }
 
   &__text {
     width: 75%;
+  }
+
+  @include tablet {
+    width: 45%;
   }
 }

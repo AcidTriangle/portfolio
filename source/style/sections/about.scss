@@ -14,21 +14,23 @@ $about-right-col-tablet: #f4f5f0;
 .about {
 
   &__col {
-    padding-top: 20px;
+    padding-top: rem(20);
     width: 50%;
     position: relative;
     &_left {
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: rem(20);
+      padding-left: rem(20);
       background: $about-left-col;
       text-align: center;
     }
     &_right {
-      padding-left: 40px;
+      padding-left: rem(40);
       background: $about-right-col;
 
       @include tablet {
         background-color: $about-right-col-tablet;
+        padding-right: 40px;
+        padding-top: 50px;
       }
     }
 
@@ -40,7 +42,7 @@ $about-right-col-tablet: #f4f5f0;
   &__triangle {
     display: block;
     width: 50%;
-    height: 160px;
+    height: rem(160);
     position: absolute;
     bottom: 100%;
     &_left {

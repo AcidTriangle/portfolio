@@ -1,13 +1,13 @@
 .user {
-  width: 460px;
-  height: 270px;
+  width: rem(460);
+  height: rem(270);
   text-align: center;
   color: $white;
 
   @include align(both);
 
   &-bg {
-    width: 460px;
+    width: rem(460);
     opacity: 0.07;
     @include align();
     &__img {
@@ -16,29 +16,29 @@
   }
 
   &__pic {
-    margin: 0 auto 20px;
+    margin: 0 auto rem(20);
     border-radius: 50%;
     overflow: hidden;
-    width: 141px;
-    height: 141px;
+    width: rem(141);
+    height: rem(141);
     position: relative;
   }
 
   &__img {
-    width: 300px;
+    width: rem(300);
     position: absolute;
-    top: -30px;
-    left: -78px;
+    top: rem(-30);
+    left: rem(-78);
   }
 
   &__title {
     margin-bottom: 10px;
     font-family: 'robotomedium';
-    font-size: 35px;
+    font-size: rem(35);
 
     &_blog {
-      font-size: 63px;
-      margin-bottom: 20px;
+      font-size: rem(63);
+      margin-bottom: rem(20);
       font-family: 'sansus_regular';
     }
   }

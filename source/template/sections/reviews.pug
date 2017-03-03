@@ -1,12 +1,16 @@
 section.section.reviews
+
+    .reviews__background
+        img(src="./assets/img/reviews_bg.jpg").reviews__background-img
+
     .container.reviews-container
 
-            +section-title('Что обо мне говорят', 'white reviews__title', '3')
+        +section-title('Что обо мне говорят', 'white reviews__title', '3')
 
-            include ../blocks/reviews
-            include ../blocks/feedback
+        include ../blocks/reviews
+    include ../blocks/feedback
 
-            a.nav-arrow.nav-arrow_up(href="#")
-                +svg('nav-arrow__pic', 'portf_arrow_up')
+    a.nav-arrow.nav-arrow_up(href="#")
+        +svg('nav-arrow__pic', 'portf_arrow_up')
 
     include footer

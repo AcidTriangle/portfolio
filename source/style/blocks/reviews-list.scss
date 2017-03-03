@@ -1,7 +1,7 @@
 .reviews {
   &__list {
-    width: 750px;
-    margin: 70px 0;
+    width: 100%;
+    margin: rem(70) 0 0;
     color: $white;
     font-size: 0;
     font-family: 'robotoitalic';
@@ -21,9 +21,9 @@
   }
 
   &__pic {
-    margin: 0 auto 20px;
-    width: 77px;
-    height: 77px;
+    margin: 0 auto rem(20);
+    width: rem(77);
+    height: rem(77);
     overflow: hidden;
     border-radius: 50%;
     position: relative;
@@ -38,7 +38,7 @@
   }
 
   &__reviewer {
-    margin-top: 30px;
+    margin-top: rem(30);
     text-align: center;
 
   }
@@ -48,8 +48,8 @@
   }
 
   &__bg {
-    width: 75px;
-    height: 61px;
+    width: rem(75);
+    height: rem(61);
     opacity: 0.1;
     background: url('../img/quotes.svg') no-repeat;
     position: absolute;
