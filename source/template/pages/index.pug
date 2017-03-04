@@ -8,9 +8,10 @@ block content
         .auth__bg-pic
             img.auth__bg-img(src="./assets/img/auth_background.png")
 
-        include ../sections/auth
+        .auth-container
+            include ../sections/auth
 
         .auth-copyright
             include ../blocks/copyright
 
-        a(href="#").auth-btn Авторизоваться
+        a(href="#").auth-btn-front Авторизоваться
