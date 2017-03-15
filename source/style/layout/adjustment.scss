@@ -44,7 +44,10 @@ a {
   &-auth {
     height: 100vh;
     width: 100vw;
-
+    @include phone {
+      height: auto;
+      width: auto;
+    }
   }
 }
 
@@ -59,4 +62,10 @@ a {
   height: 100%;
   position: relative;
   @extend %clearfix;
+}
+
+.parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }

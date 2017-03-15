@@ -1,15 +1,46 @@
 .slider
     .slider__preview
         .slider__content
+            each item, index in slider
+                -
+                    var active = ""
+                    if (index == 0)
+                        active = 'active'
+                    else
+                        active = ""
+                .slider__img-container.slider__img-container_main(class=active) 
+                    img.slider__content-img(src='assets/img/' + item.photo)
+
     .slider__desc
         .slider__desc-content
-            .block-title.slider__title Сайт школы онлайн образования
-            .slider__instr HTML, CSS, JAVASCRIPT
-            a.slider__btn(href="#")
-                +svg('slider__btn-pic', 'link')
-                .slider__btn-text Посмотреть сайт
+            each item, index in slider
+                -
+                    var active = ""
+                    if (index == 0)
+                    active = 'active'
+                    else
+                    active = ""
+                .slider__desc-item(class=active)
+                    .block-title.slider__title= item.desc.title
+                    .slider__instr= item.desc.instr
+                    a.slider__btn(href=item.desc.href)
+                        +svg('slider__btn-pic', 'link')
+                        .slider__btn-text Посмотреть сайт
+
     .slider__nav
-        .slider__nav-col.slider__nav-col_prev
-            +svg('slider__arrow_down slider__arrow', 'arrow_down')
-        .slider__nav-col.slider__nav-col_next
-            +svg('slider__arrow_up slider__arrow', 'arrow_down')
+        a.slider__nav-link.slider__nav-link_next(href="#")
+            .slider__nav-col.slider__nav-col_next
+                +svg('slider__arrow_down slider__arrow', 'arrow_down')
+                .slider__nav-pic
+                    each item in slider
+                        .slider__img-container.slider__img-container_next
+                            img.slider__nav-img(src='assets/img/' + item.photo)
+
+        a.slider__nav-link.slider__nav-link_prev(href="#")
+            .slider__nav-col.slider__nav-col_prev
+                +svg('slider__arrow_up slider__arrow', 'arrow_down')
+                .slider__nav-pic
+                    each item in slider
+                        .slider__img-container.slider__img-container_prev
+                            img.slider__nav-img(src='assets/img/' + item.photo)
+

@@ -1,12 +1,20 @@
 .nav {
+  display: inline-block;
   font-weight: bold;
   margin-bottom: rem(30);
+
+  @include phone {
+    margin-bottom: 20px;
+  }
 
   &__list {
     margin-left: rem(-40);
     font-size: 0;
     * {
       font-size: 1rem;
+    }
+    @include phone {
+      margin-left: -10px;
     }
   }
 
@@ -16,9 +24,15 @@
     font-family: 'robotomedium';
     &:hover {
       .nav__link {
-        transition: .5s;
         color: $main-blue;
       }
     }
+    @include phone {
+      margin-left: 10px;
+    }
+  }
+
+  &__link {
+    transition: .5s;
   }
 }

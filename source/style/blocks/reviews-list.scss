@@ -15,8 +15,13 @@
     display: inline-block;
     width: 49%;
     vertical-align: top;
+    position: relative;
     &:first-child {
       margin-right: 2%;
+    }
+
+    @include phone {
+      width: 100%;
     }
   }
 
@@ -52,6 +57,7 @@
     height: rem(61);
     opacity: 0.1;
     background: url('../img/quotes.svg') no-repeat;
+    background-size: contain;
     position: absolute;
     top: 30%;
   }

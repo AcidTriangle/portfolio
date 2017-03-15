@@ -1,4 +1,8 @@
 .socials {
+  display: inline-block;
+  position: absolute;
+  top: 34px;
+  left: 30px;
   &__item {
     margin-left: rem(30);
     display: inline-block;
@@ -16,5 +20,10 @@
     width: rem(32);
     height: rem(22);
     transition: .5s;
+  }
+
+  @include phone {
+    top: 15px;
+    left: 10px;
   }
 }

@@ -1,0 +1,92 @@
+$sidebar-color-phone: #253468;
+
+.blog-sb {
+  width: rem(300);
+  text-align: right;
+
+  &__list {
+    @include phone {
+      @include align(vert);
+    }
+  }
+
+  &__item {
+    margin-bottom: rem(10);
+    &.active .blog-sb__link {
+      border-right: rem(3) solid $main-blue;
+      color: $main-blue;
+      font-family: 'robotobold';
+      @include phone {
+        border-right: none;
+        color: #ffffff;
+      }
+    }
+
+  }
+  &__link {
+    display: inline-block;
+    padding: rem(15) rem(20);
+    color: $sidebar-text;
+    line-height: rem(26);
+    &:hover {
+      transition: 0.5s;
+      color: $main-blue;
+      font-family: 'robotobold';
+      @include phone {
+        color: #ffffff;
+      }
+    }
+    @include phone {
+      color: #ffffff;
+    }
+  }
+
+  @include desktop {
+    position: static;
+    float: left;
+    margin-left: rem(-80);
+  }
+  @include laptop {
+    display: none;
+    float: none;
+    margin-left: 0;
+  }
+  @include phone {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 10%;
+    z-index: 10;
+    background: $sidebar-color-phone;
+    &_phone {
+      display: none;
+    }
+    &:after, &:before {
+      content: '';
+      display: block;
+      width: 60px;
+      background: $sidebar-color-phone;
+      position: absolute;
+      top: 50%;
+    }
+    &:after {
+      margin-top: -30px;
+      height: 60px;
+      right: -12px;
+      z-index: -10;
+      border-radius: 50%;
+      box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+    &:before {
+      height: 80px;
+      right: 0;
+      background: $sidebar-color-phone;
+      margin-top: -40px;
+    }
+  }
+}
+
+.sb-fixed {
+  position: fixed;
+}

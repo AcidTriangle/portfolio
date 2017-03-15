@@ -2,7 +2,6 @@ $about-left-col: #f2f0e8;
 $about-right-col: #eae8e2;
 $about-right-col-tablet: #f4f5f0;
 
-
 .about-container {
   display: flex;
 
@@ -22,6 +21,9 @@ $about-right-col-tablet: #f4f5f0;
       padding-left: rem(20);
       background: $about-left-col;
       text-align: center;
+      @include phone {
+        padding: 0;
+      }
     }
     &_right {
       padding-left: rem(40);
@@ -32,10 +34,17 @@ $about-right-col-tablet: #f4f5f0;
         padding-right: 40px;
         padding-top: 50px;
       }
+
     }
 
     @include tablet {
       width: 100%;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+    @include phone {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

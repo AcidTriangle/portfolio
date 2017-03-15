@@ -13,6 +13,9 @@
     &__img {
       width: 100%;
     }
+    @include phone {
+      width: 93%;
+    }
   }
 
   &__pic {
@@ -22,6 +25,7 @@
     width: rem(141);
     height: rem(141);
     position: relative;
+    z-index: 1;
   }
 
   &__img {
@@ -45,5 +49,9 @@
 
   &__desc {
     font-family: 'robotoregular';
+  }
+
+  @include phone {
+    width: 93%;
   }
 }

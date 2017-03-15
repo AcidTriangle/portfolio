@@ -1,8 +1,19 @@
 .map {
-  background: url('../img/map.png') no-repeat 50% 50%;
   background-size: 100% 100%;
 
   &-container {
     height: 100vh;
+    @include phone {
+      height: calc(100vh + #{$contacts-phone-height});
+    }
   }
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
 }

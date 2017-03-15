@@ -2,17 +2,21 @@ $skill-blue: #243994;
 
 .skills {
 
-
   &__text {
+    text-align: left;
     margin: rem(40) 0 rem(60);
     @include tablet {
-      width: 472px;
+      width: 100%;
       margin: 0 auto;
     }
   }
 
   @include tablet {
     text-align: center;
+  }
+  @include phone {
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }
 

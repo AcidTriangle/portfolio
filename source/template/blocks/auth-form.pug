@@ -1,14 +1,19 @@
 form(action="", method="post").auth-form
     .auth-form__row
-        .auth-form__input-pic.auth-form__input-pic_login
-        input(type="text", id="login-input", name="login", placeholder="Логин").auth-form__input
+        input(type="text", id="login-input", name="login", placeholder="Логин").auth-form__input.auth-form__input_login
+        .auth-form__input-pic
+            +svg('auth-form__pic_login auth-form__pic', 'login')
+
     .auth-form__row
-        .auth-form__input-pic.auth-form__input-pic_pass
-        input(type="password", id="auth-password", name="password", placeholder="Пароль").auth-form__input
+        input(type="password", id="auth-password", name="password", placeholder="Пароль").auth-form__input.auth-form__input_password
+        .auth-form__input-pic
+            +svg('auth-form__pic_password auth-form__pic', 'password')
+
     .auth-form__row
         label.auth-form__check
             input(type="checkbox", id="check-human").auth-form__check-input
             span.auth-form__check-title Я человек
+
     .auth-form__row
         .auth-form__qstn Вы точно не робот?
         .auth-form__radios
@@ -18,6 +23,7 @@ form(action="", method="post").auth-form
             label.auth-form__radio
                 input(type="radio", id="radio-false",  name="radio", checked).auth-form__radio-input
                 span.auth-form__radio-title Не уверен
+
     nav.auth__nav
         ul.auth__list
             li.auth__item.auth__item_form

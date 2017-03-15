@@ -10,7 +10,7 @@ $sidebar-width: rem(300);
   overflow: hidden;
   &__bg {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     height: rem(550);
@@ -20,7 +20,12 @@ $sidebar-width: rem(300);
       @include align(hor);
     }
   }
+  @include laptop {
+    height: 100vh;
+  }
 }
+
+
 
 .blog {
   padding-top: rem(70);
@@ -48,46 +53,8 @@ $sidebar-width: rem(300);
   @include desktop {
     width: 1020px;
   }
-  @include tablet {
+  @include laptop {
     width: 95%
-  }
-}
-
-.blog-sb {
-  width: rem(300);
-  text-align: right;
-  position: absolute;
-  left: - ($sidebar-width + rem(100));
-
-  &__item {
-    margin-bottom: rem(10);
-    &.active .blog-sb__link {
-      border-right: rem(3) solid $main-blue;
-      color: $main-blue;
-      font-family: 'robotobold';
-    }
-  }
-  &__link {
-    display: inline-block;
-    padding: rem(15) rem(20);
-    color: $sidebar-text;
-    line-height: rem(26);
-    &:hover {
-      transition: 0.5s;
-      color: $main-blue;
-      font-family: 'robotobold';
-    }
-  }
-
-  @include desktop {
-    position: static;
-    float: left;
-    margin-left: rem(-80);
-  }
-  @include tablet {
-    display: none;
-    float: none;
-    margin-left: 0;
   }
 }
 
@@ -99,7 +66,7 @@ $sidebar-width: rem(300);
     width: 720px;
     float: right;
   }
-  @include tablet {
+  @include laptop {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -144,5 +111,8 @@ $sidebar-width: rem(300);
     p {
       margin: 0 0 rem(20);
     }
+  }
+  @include laptop {
+    padding-bottom: 50px;
   }
 }

@@ -1,4 +1,41 @@
 .copyright {
   color: $white;
   font-family: 'robotolight';
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    &_name {
+      padding-right: 5px;
+      @include phone {
+        display: block;
+        padding-right: 0;
+      }
+    }
+    &_desc {
+      padding-left: 6px;
+      padding-right: 6px;
+      &:after, &:before {
+        display: block;
+        content: '|';
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &:after {
+        left: auto;
+        right: 0;
+      }
+
+      @include phone {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &_year {
+      padding-left: 5px;
+    }
+  }
 }

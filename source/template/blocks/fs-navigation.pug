@@ -1,0 +1,10 @@
+nav.fs-nav
+    .fs-nav__part.fs-nav__part_left
+    .fs-nav__part.fs-nav__part_right
+
+    .fs-nav__content
+        .fs-nav__list
+            each value, key in links
+                li.fs-nav__item
+                    a.fs-nav__link(href=`./${key}`)
+                        | #{value}

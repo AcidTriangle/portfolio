@@ -1,13 +1,16 @@
 .nav-arrow {
   display: block;
-  @include align(hor);
   z-index: 10;
   bottom: rem(70);
+  @include align(hor);
   &_up {
     position: static;
     margin: 0 auto;
     width: rem(30);
     margin-bottom: rem(70);
+    @include phone {
+      margin-bottom: 40px;
+    }
   }
 
   &__pic {
@@ -20,5 +23,17 @@
 
   &:hover &__pic{
     fill-opacity: 1;
+  }
+}
+
+.blog-hero {
+  .nav-arrow {
+    display: none;
+    @include laptop {
+      display: block;
+    }
+    @include phone {
+      display: none;
+    }
   }
 }

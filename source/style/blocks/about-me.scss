@@ -23,9 +23,11 @@
       float: none;
       display: inline-block;
     }
-    @include tablet {
-      width: 60%;
-    }
+
+  }
+
+  @include tablet {
+    width: 100%;
   }
 
 }
@@ -43,5 +45,10 @@
   }
   &__text {
     text-align: left;
+
+    @include phone {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
   }
 }

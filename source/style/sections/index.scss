@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include phone {
+    height: auto;
+    width: auto;
+  }
 }
 
 .auth {
@@ -36,7 +40,10 @@
         height: $bg-mountain-laptop - 100px;
       }
       @include tablet {
-        height: $bg-mountain-tablets - 200px;
+        height: $bg-mountain-tablets - 100px;
+      }
+      @include phone {
+        height: 620px;
       }
     }
     &-img {
@@ -125,6 +132,9 @@
   @include tablet {
     width: 45vmax;
   }
+  @include phone {
+    width: 93%;
+  }
 }
 
 //copyright
@@ -133,6 +143,10 @@
   position: absolute;
   bottom: rem(40);
   text-align: center;
+  @include phone {
+    margin-top: 50px;
+    position: static;
+  }
 }
 
 //auth button
@@ -156,6 +170,13 @@
   @include desktop {
     right: rem(20);
   }
+  @include phone {
+    position: relative;
+    margin: 10px auto 30px;
+    top: auto;
+    right: auto;
+    z-index: 10;
+  }
 }
 
 //socials
@@ -177,6 +198,4 @@
 //flip
 .auth-flip {
   transform: rotateY(180deg);
-
-
 }

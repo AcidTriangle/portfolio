@@ -26,24 +26,21 @@
     padding-left: rem(60);
     border: none;
     position: relative;
+    &:focus + .auth-form__input-pic .auth-form__pic {
+
+      fill: #0548be;
+    }
+
 
     &-pic {
-      display: block;
       width: rem(45);
       height: rem(45);
       position: absolute;
+      left: 0;
+      top: 0;
       z-index: 1;
       background-color: #f0efe9;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
 
-      &_login {
-        background-image: url('../img/login.svg');
-      }
-      
-      &_pass {
-        background-image: url('../img/password.svg');
-      }
     }
   }
 
@@ -70,6 +67,14 @@
     &:first-child {
       margin-left: 0;
     }
+  }
+
+  &__pic {
+    width: 15px;
+    height: 17px;
+    fill: #c4cbcd;
+    transition: .45s;
+    @include align(both);
   }
 }
 

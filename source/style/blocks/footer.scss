@@ -2,6 +2,8 @@
   opacity: 0.8;
   color: $white;
   font-family: 'robotolight';
+  position: relative;
+  z-index: 20;
 }
 
 .footer-top {
@@ -9,6 +11,7 @@
   padding-bottom: rem(30);
   background: $footer-top-clr;
   position: relative;
+
   &__col {
     display: inline-block;
     width: 33%;
@@ -42,6 +45,13 @@
         width: 285px;
         text-align: right;
       }
+      @include phone {
+        float: none;
+        text-align: center;
+      }
+      @include tablet {
+        width: 40%;
+      }
     }
     &_middle {
       position: relative;
@@ -72,12 +82,34 @@
         float: left;
         width: 435px;
       }
+      @include tablet {
+        width: 60%;
+      }
+      @include phone {
+        text-align: center;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+        &:after {
+          display: block;
+          content: '';
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          top: auto;
+          background: rgba(#fff, 0.2);
+          opacity: 1;
+        }
+      }
     }
 
     @include laptop {
-      display: block;
       padding-left: 0;
       padding-right: 0;
+    }
+    @include phone {
+      display: block;
+      width: 100%;
     }
   }
 
@@ -94,7 +126,7 @@
 
 .footer-container {
   @include laptop {
-    width: 720px;
+    width: 93%;
     margin: 0 auto;
   }
 }
@@ -108,4 +140,7 @@
   height: rem(38);
   background: $main-blue;
   text-align: center;
+  @include phone {
+    height: auto;
+  }
 }

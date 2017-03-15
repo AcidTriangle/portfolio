@@ -91,6 +91,11 @@
       }
     }
   }
+
+  @include phone {
+    width: 93%;
+    margin-bottom: 40px;
+  }
 }
 
 .feedback__imput::-moz-placeholder {

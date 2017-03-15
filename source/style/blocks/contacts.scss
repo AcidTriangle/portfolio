@@ -1,8 +1,9 @@
 .contacts {
-  padding: rem(40)rem(20)rem(30);
+  padding: rem(40) rem(20) rem(30);
   width: rem(580);
   background-color: rgba($white, 0.7);
   @include align();
+  z-index: 20;
 
   &__title {
     margin-bottom: rem(30);
@@ -24,6 +25,9 @@
 
   &__item {
     margin-bottom: rem(30);
+    @include phone {
+      margin-bottom: 10px;
+    }
   }
 
   &__block {
@@ -36,7 +40,12 @@
     margin-right: rem(10);
     width: rem(45);
     height: rem(45);
-    fill: $blue
+    fill: $blue;
+
+    @include phone {
+      width: 34px;
+      height: 34px;
+    }
   }
 
   &__text {
@@ -45,5 +54,17 @@
 
   @include tablet {
     width: 45%;
+  }
+
+  @include phone {
+    width: 100%;
+    min-height: $contacts-phone-height;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    background: #fcfcfc;
   }
 }
