@@ -1,3 +1,11 @@
+var sliderButtons = $('.slider__nav-link');
+var toggleClasses = function () {
+  sliderButtons.addClass('active');
+  setTimeout(function () {
+    sliderButtons.removeClass('active')
+  }, 1000);
+};
+
 window.onload = function () {
   if($('.feedback').length)
     blur.set();
@@ -25,16 +33,24 @@ $(function () {
   scroll.init();
   slider.set();
 
-
   //slider controls
+
   $('.slider__nav-link_next').on('click', function (e) {
     e.preventDefault();
+
+    if (sliderButtons.hasClass('active')) return;
+
     slider.click('down');
+    toggleClasses();
   });
   $('.slider__nav-link_prev').on('click', function (e) {
     e.preventDefault();
+    if (sliderButtons.hasClass('active')) return;
+
     slider.click('up');
+    toggleClasses();
   });
+
 
 });
 

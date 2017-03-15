@@ -40,7 +40,7 @@ var fullscreen = (function () {
           fsNav.addClass('active');
         }, 300);
 
-        fsContent.animate({opacity: 1}, 1300, function () {
+        fsContent.animate({opacity: 1}, 1000, function () {
           inAction = false;
         });
 

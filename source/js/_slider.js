@@ -10,9 +10,6 @@ var slider = (function () {
     prevImg = prevImgs.eq(count(counter, '-')),
     nextImg = nextImgs.eq(count(counter, '+'));
 
-  var scrollPos = 0;
-  var onload = true;
-
   function count(count, sign) {
     if (sign == '+') {
       return count >= imgsLength - 1 ? 0 : count + 1;
@@ -34,7 +31,7 @@ var slider = (function () {
           .css('opacity', '0')
       },
 
-      prevImg: function () {
+      prevImg: function (button) {
         tempCounter = count(counter, '-');
         prevImgs.eq(count(counter, '-'))
           .css('top', '100%')
@@ -44,13 +41,13 @@ var slider = (function () {
             $(this).siblings().css('top', '100%');
           });
 
-        prevImgs.eq(count(tempCounter, '+'))
+        prevImgs.eq(count(tempCounter, button))
           .animate({
             top: '-100%'
           }, time);
       },
 
-      nextImg: function () {
+      nextImg: function (button) {
         tempCounter = count(counter, '+');
         nextImgs.eq(count(counter, '+'))
           .css('top', '-100%')
@@ -60,7 +57,7 @@ var slider = (function () {
             $(this).siblings().css('top', '-100%');
           });
 
-        nextImgs.eq(count(tempCounter, '-'))
+        nextImgs.eq(count(tempCounter, button))
           .animate({
             top: '100%'
           }, time);
@@ -77,8 +74,6 @@ var slider = (function () {
       .animate({'opacity': '0'}, 1000)
   }
 
-
-
   var load = function () {
     currentImg.siblings().css('opacity', '0');
     currentDsc.siblings().css('opacity', '0');
@@ -87,19 +82,24 @@ var slider = (function () {
   };
 
   var buttonsClick = function (direction) {
+    var time = 1000,
+      sign;
+
     if (direction == 'down') {
       counter = count(counter, '+');
+      sign = '-';
     }
     else if (direction == 'up') {
       counter = count(counter, '-');
+      sign = '+';
     }
 
     setImages(counter).activeImg();
-    setImages(counter, 1000).prevImg();
-    setImages(counter, 1200).nextImg();
+    setImages(counter, time).prevImg(sign);
+    setImages(counter, time).nextImg(sign);
     setDesc(counter);
-  };
 
+  };
 
   return {
     click: function (direction) {

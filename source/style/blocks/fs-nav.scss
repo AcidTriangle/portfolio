@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   z-index: 30;
-  transition: 2s;
+  transition: 1.5s;
   display: none;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
     top: 0;
     bottom: 0;
     opacity: 0.87;
-    transition: 2s;
+    transition: 1s;
     &_left {
       left: -50%;
     }
