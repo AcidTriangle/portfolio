@@ -2,7 +2,6 @@ var sidebar = (function () {
   var blog = document.querySelector('.blog'),
     sidebar = $('.blog-sb'),
     footerHeight = $('.footer').height(),
-    pageHeight = $(document).height(),
     sidebarHeight = sidebar.height(),
     articles = $('.blog-article'),
     sbLinks = $('.blog-sb__link');
@@ -12,7 +11,9 @@ var sidebar = (function () {
   }
 
   var sidebarAttach = function () {
+
     var yOffset = window.pageYOffset;
+    var pageHeight = $(document).height();
     var sidebarPos = sidebarHeight + yOffset + blogPadding,
       footerPos = pageHeight - footerHeight - blogPadding;
 

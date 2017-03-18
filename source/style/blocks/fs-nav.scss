@@ -31,6 +31,13 @@
     opacity: 0;
   }
 
+  &__list {
+    margin-bottom: -58px;
+    @include phone {
+      margin-bottom: -30px;
+    }
+  }
+
   &__item {
     text-align: center;
     padding-bottom: 33px;
@@ -54,12 +61,19 @@
         opacity: 1;
       }
     }
+
+    @include phone {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
     font-size: rem(63);
     color: #ffffff;
     position: relative;
+    @include phone {
+      font-size: 35px;
+    }
   }
 }
 

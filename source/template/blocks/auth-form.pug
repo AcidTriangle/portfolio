@@ -1,11 +1,11 @@
 form(action="", method="post").auth-form
     .auth-form__row
-        input(type="text", id="login-input", name="login", placeholder="Логин").auth-form__input.auth-form__input_login
+        input(type="text", id="login", name="login", placeholder="Логин").auth-form__input.auth-form__input_login
         .auth-form__input-pic
             +svg('auth-form__pic_login auth-form__pic', 'login')
 
     .auth-form__row
-        input(type="password", id="auth-password", name="password", placeholder="Пароль").auth-form__input.auth-form__input_password
+        input(type="password", id="password", name="password", placeholder="Пароль").auth-form__input.auth-form__input_password
         .auth-form__input-pic
             +svg('auth-form__pic_password auth-form__pic', 'password')
 
@@ -29,4 +29,4 @@ form(action="", method="post").auth-form
             li.auth__item.auth__item_form
                 input(type="button",  value="На главную").auth__btn.auth__btn_form.auth-btn-back
             li.auth__item.auth__item_form
-                input(type="submit", id="login-btn", value="Войти").auth__btn.auth__btn_form
+                input(type="submit", id="login-btn", value="Войти").auth__btn.auth__btn_form.auth__btn_submit

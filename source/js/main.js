@@ -27,14 +27,25 @@ window.onresize = function () {
 };
 
 $(function () {
-  fullscreen.init();
+  //preloader init
   preloader.init();
-  flip.init();
-  scroll.init();
-  slider.set();
+
+  //fullscreen navigation init
+  if($('.fs-nav').length)
+    fullscreen.init();
+
+  //flip in auth page init
+  if($('.auth').length)
+    flip.init();
+
+  //scroll arrown init
+  if ($('.nav-arrow').length)
+    scroll.init();
+
+  if ($('.slider'))
+    slider.set();
 
   //slider controls
-
   $('.slider__nav-link_next').on('click', function (e) {
     e.preventDefault();
 
@@ -51,6 +62,21 @@ $(function () {
     toggleClasses();
   });
 
+  //auth warnings
+  $('.auth__btn_submit').on('click', function () {
+    if (!validation.content($('.auth-form__input'))) {
+      return false;
+    }
+  });
+
+  //feedback warnings
+  $('.feedback__btn_submit').on('click', function () {
+    validation.content($('.feedback__input'));
+  });
+
+  $('.auth-form__input,.feedback__input').on('focus', function () {
+    validation.focus($(this));
+  })
 
 });
 

@@ -29,6 +29,7 @@
   }
 
   &__block {
+    position: relative;
     margin-bottom: rem(20);
   }
 
@@ -39,6 +40,7 @@
     border: none;
     background: rgba(#fff, 0.07);
     color: #ffffff;
+    box-shadow: none;
     transition: .5s;
     &_ta {
       height: rem(130);

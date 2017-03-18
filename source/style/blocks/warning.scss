@@ -1,0 +1,59 @@
+$warning-color: #e44845;
+$warning-string: "Вы не ввели ";
+
+.warning {
+  .auth-form__pic {
+    fill: $warning-color;
+  }
+
+  &:before {
+    @include align(hor);
+    content: '';
+    display: inline-block;
+    padding: rem(15) rem(20);
+    top: calc(100% + #{rem(15)});
+    z-index: 5;
+    border-radius: rem(5);
+    background-color: $warning-color;
+    font-family: robotoregular;
+    line-height: 1rem;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  &:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: calc(100% + #{rem(5)});
+    left: 50%;
+    margin-left: rem(-12);
+    border: rem(12) solid transparent;
+    border-bottom-color: $warning-color;
+    border-top: 0;
+  }
+
+  &_login:before {
+    content: $warning-string + "логин";
+  }
+
+  &_password:before {
+    content: $warning-string + "пароль";
+  }
+  &_name:before {
+    content: $warning-string + " имя";
+  }
+  &_email:before {
+    content: $warning-string + " email";
+  }
+  &_message:before {
+    content: $warning-string + " сообщение";
+  }
+
+
+  .auth-form__input,
+  .feedback__input {
+    outline: 1px solid $warning-color;
+  }
+}

@@ -1,3 +1,5 @@
+$picture-width: rem(45);
+
 .auth-back {
   width: 100%;
   height: 100%;
@@ -21,11 +23,15 @@
   }
 
   &__input {
-    width: 100%;
+    width: calc(100% - #{$picture-width});
     height: rem(45);
-    padding-left: rem(60);
+    margin-left: $picture-width;
+    padding-left: rem(15);
     border: none;
     position: relative;
+    &:focus {
+      outline: 1px solid #0548be;
+    }
     &:focus + .auth-form__input-pic .auth-form__pic {
 
       fill: #0548be;
@@ -33,8 +39,8 @@
 
 
     &-pic {
-      width: rem(45);
-      height: rem(45);
+      width: $picture-width;
+      height: $picture-width;
       position: absolute;
       left: 0;
       top: 0;

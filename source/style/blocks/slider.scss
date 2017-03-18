@@ -9,6 +9,7 @@
     height: 100%;
     background: #f2f0e8;
     position: relative;
+    z-index: 5;
     &-content {
       @include align(both);
       text-align: center;
